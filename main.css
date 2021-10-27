@@ -1,0 +1,282 @@
+body {
+    height: 100px;
+    color: white;
+}
+
+.sidebar {
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    background-color: #1d1d22;
+    display: block;
+}
+
+.sidebar a,
+.sidebar a.active,
+.sidebar a:hover,
+.sidebar .logo {
+    background-color: #1d1d22;
+    text-align: center;
+    border: 0px;
+    color: white;
+}
+
+.sidebar a .bi {
+    font-size: 30px;
+}
+
+.sidebar a.active .bi {
+    font-size: 50px;
+}
+
+.sidebar a:not(.active) {
+    color: white;
+}
+
+.sidebar a.active {
+    color: #25c2a7;
+}
+
+.content-site {
+    margin-left: 150px;
+}
+
+.sidebar .logo {
+    border-bottom: 5px solid black;
+    border-radius: 10%;
+}
+
+.jumbotron {
+    background-color: #070708;
+    display: block;
+    flex: 0 0 auto;
+    width: 83.33333333%;
+    border-radius: 3%;
+}
+
+.mr-3 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    float: left;
+    border-bottom-left-radius: 10px;
+}
+
+.tab-pane {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.title-with-border {
+    border-bottom: 1px solid #25c2a7;
+    width: 235px;
+    height: 50px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+/*timeline init*/
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    background-color: #070708;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: #25c2a7;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 80%;
+    z-index: 400;
+}
+
+ul.timeline>li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul.timeline>li:before {
+    content: ' ';
+    background: #070708;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #25c2a7;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+ul.timeline a {
+    color: #25c2a7;
+}
+
+
+/*timeline End*/
+
+h1 {
+    text-align: center;
+}
+
+
+/*custumização init*/
+
+.img-container {
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    border: 2px solid #25c2a7;
+}
+
+.img-container img {
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.img-container:hover img {
+    -webkit-transform: scale(5.5);
+    transform: scale(3.3);
+}
+
+
+/*custumização end*/
+
+.my-location {
+    color: #25c2a7;
+    font-weight: 300;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.sub-title-abaut-me {
+    font-weight: bold;
+    color: #808080;
+    margin-top: 12px;
+}
+
+.col-md-12 {
+    background-color: #25c2a7;
+    color: #808080;
+}
+
+.card.service {
+    background-color: #070708;
+    text-align: center;
+    min-height: 200px;
+    padding-top: 15px;
+}
+
+.card .service-icon {
+    font-size: 50px;
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    padding-top: 15px;
+}
+
+#teste3 {
+    border-radius: 20%;
+    position: relative;
+    top: 10px;
+    padding: 4px;
+    background-color: #25c2a7;
+    transition: all .5s ease-in-out;
+    display: block;
+    margin-left: 110px;
+    margin-right: 40px;
+}
+
+#teste3:hover {
+    top: -4px;
+    box-shadow: 0 4px 3px #25c2a7;
+}
+
+.skills span {
+    margin-bottom: 30px;
+    display: block;
+    margin-top: 50px;
+}
+
+.skills span .progress {
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #1d1d22;
+}
+
+.skills span .progress .progress-bar {
+    background-color: #25c2a7;
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width:600px) {
+    #list-tab {
+        display: none;
+    }
+    .content-site {
+        margin-left: 0px;
+    }
+    .navbar {
+        display: block !important;
+    }
+    .service-icon {
+        display: none !important;
+    }
+    .row,
+    .jumbotron,
+    .col-md-4,
+    .card-service {
+        margin-left: none !important;
+        width: none !important;
+        border-left-width: none !important;
+        margin-right: none !important;
+    }
+    .row {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        --bs-gutter-x: block;
+    }
+    .justify-content-md-center {
+        text-align: center !important;
+    }
+    .title-with-border {
+        width: 2000px !important;
+    }
+    p {
+        text-align: center !important;
+    }
+}
+
+@media (max-width:950px) {
+    .media img {
+        display: none;
+    }
+    .jumbotron {
+        width: 100%;
+    }
+    .media h2,
+    h6 {
+        text-align: center;
+    }
+}
+
+.navbar {
+    display: none;
+}
