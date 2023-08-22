@@ -1,6 +1,14 @@
 body {
-    height: 100px;
+    background-size: cover;
+    margin: 0;
     color: white;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    /* adicionando imagem de fundo */
+    background: url('fundo.jpg');
+
 }
 
 .sidebar {
@@ -230,15 +238,19 @@ p {
     #list-tab {
         display: none;
     }
+
     .content-site {
         margin-left: 0px;
     }
+
     .navbar {
         display: block !important;
     }
+
     .service-icon {
         display: none !important;
     }
+
     .row,
     .jumbotron,
     .col-md-4,
@@ -248,17 +260,21 @@ p {
         border-left-width: none !important;
         margin-right: none !important;
     }
+
     .row {
         margin-left: -15px !important;
         margin-right: -15px !important;
         --bs-gutter-x: block;
     }
+
     .justify-content-md-center {
         text-align: center !important;
     }
+
     .title-with-border {
         width: 2000px !important;
     }
+
     p {
         text-align: center !important;
     }
@@ -268,9 +284,11 @@ p {
     .media img {
         display: none;
     }
+
     .jumbotron {
         width: 100%;
     }
+
     .media h2,
     h6 {
         text-align: center;
