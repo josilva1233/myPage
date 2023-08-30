@@ -35,6 +35,8 @@
             <div class="navbar-nav list-group" role="tablist">
                 <a class="nav-link active" data-toggle="list" href="#list-home" role="tab"
                     aria-controls="home">Sobre</a>
+                <a class="nav-link" data-toggle="list" href="#list-service" role="tab"
+                    aria-controls="service">Serviços</a>
                 <a class="nav-link" data-toggle="list" href="#list-profile" role="tab"
                     aria-controls="profile">Experiência</a>
                 <a class="nav-link" data-toggle="list" href="#list-messages" role="tab"
@@ -61,6 +63,16 @@
                             <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>
                         <br> Sobre
+                    </a>
+
+                    <a class="list-group-item list-group-item-action" id="list-service-list" data-toggle="list"
+                        href="#list-service" role="tab" aria-controls="service">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                            class="bi bi-briefcase" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
+                        </svg>
+                        <br> Serviços
                     </a>
 
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
@@ -155,6 +167,83 @@
                             </div>
                         </div>
                     </div>
+                    <!--Inicio Home-->
+                    <div class="tab-pane fade show active " id="list-home" role="tabpanel"
+                        aria-labelledby="list-home-list">
+                        <div class="row justify-content-center">
+                            <h1 class="title-with-border">Sobre mim</h1>
+                        </div>
+                        <div class="row justify-content-md-center">
+                            <div class="jumbotron">
+                                <div class="media">
+                                    <br><br>
+                                    <img src=" josias.jpeg " class="mr-3 " alt="... ">
+                                    <div class="media-body ">
+                                        <br><br>
+                                        <h2 class="mt-0 ">Josias Silva</h2>
+                                        <h6 class="mt-0 my-location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z" />
+                                            </svg>Rio de Janeiro,Brasil
+                                        </h6>
+                                        <p>Olá meu nome é Josias Silva,</p>
+                                        <p>Sou especialista em gestão de projetos e suprimentos pela Faculdade Única,
+                                            tecnólogo em gestão da tecnologia da informação e atualmente cursando
+                                            Bacharelado em Engenharia de Software ambas pela Universidade Estácio
+                                            de Sá, possuo 11 anos de experiência em Logisica e suplay chan, estou
+                                            migrando para área de tecnologia da informação e conhecimento para atuar
+                                            como Junior front-end developer.
+                                        </p>
+
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 35px">
+                                    <div class="col-md-4 sub-title-abaut-me">
+                                        <h5>Junior front-end developer</h5>
+                                    </div>
+                                    <div class="col-md-4 sub-title-abaut-me">
+                                        <h5>Disponível para contratação</h5>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a class="btn btn-secondary btn-lg col-md-12" href="curriculo.pdf"
+                                            role="button">
+                                            <h5>Download curriculum</h5>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fim Home-->
+                    <!--Novo Inicio Service-->
+
+                    <div class="tab-pane fade " id="list-service" role="tabpanel" aria-labelledby="list-service-list">
+                        <div class="row justify-content-center">
+                            <h1 class="title-with-border">Serviços</h1>
+                        </div>
+                        <div class="row" style="margin-left: 50px;">
+                            <div class="col-md-4">
+                                <div class="card service">
+                                    <div class="card-body">
+
+                                        <div class=" service-icon">
+                                            <img width="80" height="80" src="icone.png" id="teste3">
+                                        </div>
+                                        <br>
+                                        <h5 class="card-title">Front-end Developer</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">HTML, CSS E JAVASCRIP</h6>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Novo Fim Service-->
+
                     <div class="tab-pane fade " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <div class="row justify-content-center">
                             <h1 class="title-with-border">Resumo</h1>
