@@ -1,18 +1,16 @@
 body {
     color: white;
     /* adicionando imagem de fundo */
-    background: url('fundo.jpg') no-repeat right top fixed;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-
+  
+background: rgb(2,0,36);
+background: #1d1d08;
 }
 
 .sidebar {
     width: 150px;
     height: 100vh;
     position: fixed;
-    background-color: #1d1d22;
+    background-color: #070708;
     display: block;
 }
 
@@ -20,7 +18,7 @@ body {
 .sidebar a.active,
 .sidebar a:hover,
 .sidebar .logo {
-    background-color: #1d1d22;
+    background-color: #070708;
     text-align: center;
     border: 0px;
     color: white;
@@ -68,7 +66,7 @@ body {
 }
 
 .tab-pane {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-bottom: 100px;
 }
 
@@ -294,12 +292,13 @@ p {
 
 .navbar {
     display: none;
+    background-color: #070708 !important;
+    text-align: center;
+    
+    
 }
 
 
-
-/*Scroll dentro da div*/
 #divContent{
     overflow:auto; 
    }
-
