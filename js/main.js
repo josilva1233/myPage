@@ -21,6 +21,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
             alert('Mensagem enviada com sucesso!');
             form.reset(); // Limpa o formulário após o envio bem-sucedido, se necessário
             // Pode adicionar aqui qualquer ação após o envio bem-sucedido
+            window.location.href = 'https://josilva1233.github.io/myPage/';
         })
         .catch(function(error) {
             alert('Erro ao enviar mensagem. Por favor, tente novamente mais tarde.');
