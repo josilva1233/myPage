@@ -1,11 +1,9 @@
-function enviarFormulario() {
-    // Captura o formulário
-    var form = document.getElementById('messageForm');
+document.getElementById('messageForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o comportamento padrão de submissão do formulário
 
-    // Cria um objeto FormData e preenche com os dados do formulário
+    var form = event.target;
     var formData = new FormData(form);
 
-    // Envia os dados utilizando fetch
     fetch('https://formspree.io/f/xqknzakp', {
             method: 'POST',
             body: formData,
@@ -21,10 +19,11 @@ function enviarFormulario() {
         })
         .then(function(data) {
             alert('Mensagem enviada com sucesso!');
+            form.reset(); // Limpa o formulário após o envio bem-sucedido, se necessário
             // Pode adicionar aqui qualquer ação após o envio bem-sucedido
         })
         .catch(function(error) {
             alert('Erro ao enviar mensagem. Por favor, tente novamente mais tarde.');
             console.error('Erro:', error);
         });
-}
+});
