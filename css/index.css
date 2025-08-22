@@ -140,6 +140,15 @@ a {
     box-shadow: 0 4px 8px rgba(37, 194, 167, 0.4);
 }
 
+/* Correção de Contraste nos Cards de Serviço */
+.card.service .card-title {
+    color: #f8f9fa; /* Define o título principal do card como branco */
+}
+
+.card.service .card-subtitle {
+    color: #adb5bd; /* Define o subtítulo como um cinza claro e legível */
+}
+
 
 /* Timeline (Experiência e Cursos) */
 ul.timeline {
