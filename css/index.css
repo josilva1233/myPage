@@ -1,4 +1,9 @@
 /* Estilos Gerais */
+:root {
+    --cor-principal: #25c2a7; /* A cor verde que será customizável */
+    --cor-principal-rgba: rgba(37, 194, 167, 0.25); /* Versão com transparência da cor principal */
+}
+
 body {
     color: white;
     background-color: #1d1d08;
@@ -14,7 +19,7 @@ a {
 }
 
 .title-with-border {
-    border-bottom: 2px solid #25c2a7;
+    border-bottom: 2px solid var(--cor-principal);
     padding-bottom: 0.5rem;
     margin-bottom: 2.5rem;
     display: inline-block;
@@ -29,6 +34,8 @@ a {
     left: 0;
     background-color: #070708;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar .list-group-item {
@@ -48,7 +55,7 @@ a {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid #25c2a7;
+    border: 2px solid var(--cor-principal);
     transition: transform 0.3s ease;
 }
 
@@ -58,12 +65,12 @@ a {
 
 .sidebar .list-group-item-action:hover, .sidebar .list-group-item-action:focus {
     background-color: #1a1a1a;
-    color: #25c2a7;
+    color: var(--cor-principal);
 }
 
 .sidebar .list-group-item-action.active {
     background-color: #070708;
-    color: #25c2a7;
+    color: var(--cor-principal);
 }
 
 .sidebar .list-group-item .bi {
@@ -73,6 +80,23 @@ a {
 
 .sidebar .list-group-item.active .bi {
     font-size: 40px;
+}
+
+/* Seletor de Cor na Sidebar */
+.color-picker-container {
+    margin-top: auto; /* Empurra o seletor para o final da sidebar */
+    border-top: 1px solid #333;
+}
+.color-picker-container .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.form-control-color {
+    width: 80%;
+    height: 40px;
+    padding: 0.2rem;
+    border: 1px solid #555;
+    cursor: pointer;
 }
 
 /* Conteúdo Principal */
@@ -95,7 +119,7 @@ a {
 }
 
 .my-location {
-    color: #25c2a7;
+    color: var(--cor-principal);
     font-weight: 300;
     display: flex;
     align-items: center;
@@ -107,17 +131,15 @@ a {
 }
 
 .btn-secondary {
-    background-color: #25c2a7;
-    border-color: #25c2a7;
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
     color: #070708;
     font-weight: bold;
 }
 
 .btn-secondary:hover {
-    background-color: #1da18a;
-    border-color: #1da18a;
+    filter: brightness(0.9);
 }
-
 
 /* Seção Serviços */
 .card.service {
@@ -131,13 +153,13 @@ a {
 .card .service-icon img {
     border-radius: 20%;
     padding: 4px;
-    background-color: #25c2a7;
+    background-color: var(--cor-principal);
     transition: all .3s ease-in-out;
 }
 
 .card .service-icon img:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(37, 194, 167, 0.4);
+    box-shadow: 0 4px 8px rgba(37, 194, 167, 0.4); /* Sombra estática ou pode ser atualizada via JS */
 }
 
 /* Correção Final de Contraste nos Cards de Serviço */
@@ -150,7 +172,6 @@ a {
     font-weight: bold; /* Adiciona negrito ao título para destacar */
 }
 
-
 /* Timeline (Experiência e Cursos) */
 ul.timeline {
     list-style-type: none;
@@ -162,7 +183,7 @@ ul.timeline {
 
 ul.timeline:before {
     content: ' ';
-    background: #25c2a7;
+    background: var(--cor-principal);
     display: block;
     position: absolute;
     left: 29px;
@@ -184,7 +205,7 @@ ul.timeline > li:before {
     display: block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #25c2a7;
+    border: 3px solid var(--cor-principal);
     left: -9px;
     top: 0;
     width: 20px;
@@ -195,7 +216,7 @@ ul.timeline > li:before {
 .timeline-role, .timeline-school {
     display: block;
     font-weight: bold;
-    color: #25c2a7;
+    color: var(--cor-principal);
 }
 
 .timeline-date {
@@ -204,7 +225,6 @@ ul.timeline > li:before {
     color: #aaa;
     margin-bottom: 0.5rem;
 }
-
 
 /* Seção Habilidades */
 .skills span {
@@ -219,39 +239,39 @@ ul.timeline > li:before {
 }
 
 .skills .progress-bar {
-    background-color: #25c2a7;
+    background-color: var(--cor-principal);
     color: #070708;
     font-weight: bold;
 }
 
-/* Seção Contato (CORRIGIDO) */
+/* Seção Contato */
 .info-link {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    gap: 0.75rem; /* Adiciona um espaço vertical entre o ícone e o texto */
-    color: white; /* Define a cor do texto do link como branca */
+    gap: 0.75rem;
+    color: white;
     transition: color 0.3s ease;
     text-align: center;
     height: 100%;
 }
 
 .info-link svg {
-    color: #25c2a7;
-    width: 32px; /* Tamanho do ícone um pouco maior */
+    color: var(--cor-principal);
+    width: 32px;
     height: 32px;
 }
 
 .info-link p {
     margin: 0;
-    color: inherit; /* O parágrafo herda a cor do link (branca) */
-    word-break: break-all; /* Garante que links longos não quebrem o layout */
+    color: inherit;
+    word-break: break-all;
 }
 
 .info-link:hover,
 .info-link:focus {
-    color: #25c2a7; /* Ao passar o mouse, o texto fica verde */
+    color: var(--cor-principal);
 }
 
 .form-control {
@@ -262,40 +282,39 @@ ul.timeline > li:before {
 
 .form-control:focus {
     background-color: #1d1d22;
-    border-color: #25c2a7;
-    box-shadow: 0 0 0 0.25rem rgba(37, 194, 167, 0.25);
+    border-color: var(--cor-principal);
+    box-shadow: 0 0 0 0.25rem var(--cor-principal-rgba);
     color: white;
 }
 
 .btn-primary {
-    background-color: #25c2a7;
-    border-color: #25c2a7;
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
     color: #070708;
     font-weight: bold;
 }
 
 .btn-primary:hover {
-    background-color: #1da18a;
-    border-color: #1da18a;
+    filter: brightness(0.9);
 }
-
 
 /* Responsividade */
 @media (max-width: 991.98px) {
-    /* Esconde a sidebar e ajusta o conteúdo principal para ocupar a tela toda */
     .content-site {
         margin-left: 0;
         width: 100%;
         padding: 1rem;
     }
     
-    /* Oculta a foto de perfil em telas menores para economizar espaço */
     .profile-pic {
         display: none; 
     }
 
-    /* Centraliza títulos na seção Sobre */
     .jumbotron h2, .jumbotron h6 {
         text-align: center;
+    }
+
+    .color-picker-container {
+        display: none; /* Oculta o seletor em telas pequenas para não atrapalhar */
     }
 }
