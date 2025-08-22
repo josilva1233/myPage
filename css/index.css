@@ -140,13 +140,14 @@ a {
     box-shadow: 0 4px 8px rgba(37, 194, 167, 0.4);
 }
 
-/* Correção de Contraste nos Cards de Serviço */
-.card.service .card-title {
-    color: #f8f9fa; /* Define o título principal do card como branco */
+/* Correção Final de Contraste nos Cards de Serviço */
+.card.service .card-title,
+.card.service .card-subtitle {
+    color: #cccccc !important; /* Cinza bem claro, !important para forçar a cor */
 }
 
-.card.service .card-subtitle {
-    color: #adb5bd; /* Define o subtítulo como um cinza claro e legível */
+.card.service .card-title {
+    font-weight: bold; /* Adiciona negrito ao título para destacar */
 }
 
 
