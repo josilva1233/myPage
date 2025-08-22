@@ -214,18 +214,34 @@ ul.timeline > li:before {
     font-weight: bold;
 }
 
-/* Seção Contato */
+/* Seção Contato (CORRIGIDO) */
 .info-link {
-    color: white;
-    transition: color 0.3s;
-}
-
-.info-link:hover {
-    color: #25c2a7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0.75rem; /* Adiciona um espaço vertical entre o ícone e o texto */
+    color: white; /* Define a cor do texto do link como branca */
+    transition: color 0.3s ease;
+    text-align: center;
+    height: 100%;
 }
 
 .info-link svg {
     color: #25c2a7;
+    width: 32px; /* Tamanho do ícone um pouco maior */
+    height: 32px;
+}
+
+.info-link p {
+    margin: 0;
+    color: inherit; /* O parágrafo herda a cor do link (branca) */
+    word-break: break-all; /* Garante que links longos não quebrem o layout */
+}
+
+.info-link:hover,
+.info-link:focus {
+    color: #25c2a7; /* Ao passar o mouse, o texto fica verde */
 }
 
 .form-control {
@@ -233,36 +249,42 @@ ul.timeline > li:before {
     border: 1px solid #333;
     color: white;
 }
+
 .form-control:focus {
     background-color: #1d1d22;
     border-color: #25c2a7;
     box-shadow: 0 0 0 0.25rem rgba(37, 194, 167, 0.25);
     color: white;
 }
+
 .btn-primary {
     background-color: #25c2a7;
     border-color: #25c2a7;
     color: #070708;
     font-weight: bold;
 }
+
 .btn-primary:hover {
     background-color: #1da18a;
     border-color: #1da18a;
 }
 
+
 /* Responsividade */
 @media (max-width: 991.98px) {
-    .sidebar {
-        display: none;
-    }
+    /* Esconde a sidebar e ajusta o conteúdo principal para ocupar a tela toda */
     .content-site {
         margin-left: 0;
         width: 100%;
         padding: 1rem;
     }
+    
+    /* Oculta a foto de perfil em telas menores para economizar espaço */
     .profile-pic {
-        display: none; /* Oculta a foto em telas menores para economizar espaço */
+        display: none; 
     }
+
+    /* Centraliza títulos na seção Sobre */
     .jumbotron h2, .jumbotron h6 {
         text-align: center;
     }
